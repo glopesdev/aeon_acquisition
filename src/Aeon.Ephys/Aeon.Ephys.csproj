@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Title>Project Aeon - Ephys</Title>
+    <Description>Provides reactive modules for ephys acquisition in Project Aeon experiments.</Description>
+    <PackageTags>$(PackageTags) Ephys</PackageTags>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <TargetFrameworks>net472</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="**\*.bonsai" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="OpenEphys.Commutator" Version="0.2.1" />
+    <PackageReference Include="OpenEphys.Onix1" Version="0.7.0-main-ci568" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aeon.Acquisition\Aeon.Acquisition.csproj" />
+  </ItemGroup>
+
+</Project>
